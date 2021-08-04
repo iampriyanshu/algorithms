@@ -1,8 +1,12 @@
 import algorithms.BinarySearch;
 import algorithms.MergeSort;
 import algorithms.QuickSort;
+import com.sun.source.tree.Tree;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Optional;
+import java.util.OptionalInt;
 //import org.springframework.boot.SpringApplication;
 //import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -34,6 +38,9 @@ public class Application {
         MergeSort.mergeSort(arr,0,arr.length-1);
         System.out.println("MERGESORT RESULT : ");
         Arrays.stream(arr).forEach(System.out::println);
+
+        int max = Arrays.stream(arr).max().getAsInt();
+
 
 
     }
